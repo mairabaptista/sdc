@@ -1,0 +1,151 @@
+#:kivy 1.0.9
+# ref: https://kivy.org/docs/tutorials/pong.html
+
+<Car>:
+    size: 20, 10
+    canvas:
+        PushMatrix
+        Rotate:
+            angle: self.angle
+            origin: self.center
+        Rectangle:
+            pos: self.pos
+            size: self.size
+        PopMatrix
+
+<Ball1>:
+    size: 10,10
+    canvas:
+        Color:
+            rgba: 1,0,0,1
+        Ellipse:
+            pos: self.pos
+            size: self.size
+<Ball2>:
+    size: 10,10
+    canvas:
+        Color:
+            rgba: 0,1,1,1
+        Ellipse:
+            pos: self.pos
+            size: self.size
+
+<Ball3>:
+    size: 10,10
+    canvas:
+        Color:
+            rgba: 1,1,0,1
+        Ellipse:
+            pos: self.pos
+            size: self.size
+
+<Game>:
+    car: game_car
+    ball1: game_ball1
+    ball2: game_ball2
+    ball3: game_ball3
+
+    Car:
+        id: game_car
+        center: self.parent.center
+    Ball1:
+        id: game_ball1
+        center: self.parent.center
+    Ball2:
+        id: game_ball2
+        center: self.parent.center
+    Ball3:
+        id: game_ball3
+        center: self.parent.center
+
+<LineTop>:
+    canvas:
+        Color:
+            rgba: 1, 1, 1, 1
+        Line:
+            width: 4.
+            points: 300,675, 850,675
+            cap: 'round'
+        Line:
+            width: 4.
+            circle: 300, 475, 200, 270, 360
+            cap: 'round'
+        Line:
+            width: 4.
+            points: 100,475, 100,100
+            cap: 'round'
+        Line:
+            width: 4.
+            circle: 200,115, 100, 180, 270
+            cap: 'round'
+        Line:
+            width: 4.
+            points: 200,15, 500,15
+            cap: 'round'
+        Line:
+            width: 4.
+            circle: 500,115, 100, 180, 150
+            cap: 'round'
+        Line:
+            width: 4.
+            circle: 850,460, 215, 0, 90
+            cap: 'round'
+        Line:
+            width: 4.
+            points: 1065,460, 1065,380
+            cap: 'round'
+        Line:
+            width: 4.
+            circle: 850,380, 215, 90, 160
+            cap: 'round'       
+        Line:
+            width: 4.
+            points: 530,20, 930,180
+            cap: 'round'
+
+
+
+
+
+
+
+        Line:
+            width: 4.
+            points: 330,595, 820,595
+            cap: 'round'
+        Line:
+            width: 4.
+            circle: 330, 445, 150, 270, 360
+            cap: 'round'
+        Line:
+            width: 4.
+            points: 180,445, 180,140
+            cap: 'round'
+        Line:
+            width: 4.
+            circle: 230,145, 50, 180, 270
+            cap: 'round'
+        Line:
+            width: 4.
+            points: 230,95, 470,95
+            cap: 'round'
+        Line:
+            width: 4.
+            circle: 470,145, 50, 180, 150
+            cap: 'round'
+        Line:
+            width: 4.
+            circle: 820,430, 165, 0, 90
+            cap: 'round'
+        Line:
+            width: 4.
+            points: 985,440, 985,390
+            cap: 'round'
+        Line:
+            width: 4.
+            circle: 820,400, 165, 90, 165
+            cap: 'round'
+        Line:
+            width: 4.
+            points: 490,100, 900,255
+            cap: 'round'
